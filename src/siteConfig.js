@@ -4,38 +4,40 @@
  * ============================================================
  *
  * LOGO
- *   Place your logo image inside the /public folder, then set
- *   the path below.  Example: '/logo.png'
- *   Supported formats: PNG, SVG, WebP, JPG
- *   Recommended size : 40 × 40 px (will be displayed at 36px)
+ *   Opsi A — File di src/assets/ (DIREKOMENDASIKAN):
+ *     Import dulu di baris bawah ini, lalu set logo: logoImg
+ *   Opsi B — File di public/ :
+ *     Hapus import, set logo: '/namafile.png' (string)
+ *     Set null untuk pakai emoji fallback (🌾)
  *
  * BACKGROUND
- *   Option A — Solid color  : set bgColor, leave bgImage empty.
- *   Option B — Image/texture: set bgImage path, leave bgColor empty.
- *   Option C — Both         : image on top of a solid color fallback.
- *   Supported formats: PNG, SVG, WebP, JPG
+ *   bgImage: path ke file di public/ (string), atau null.
+ *   bgColor: warna fallback CSS.
  *
  * SITE_NAME / TAGLINE
- *   Shown in the Navbar and the browser <title> tag.
+ *   Muncul di Navbar dan tab browser.
  * ============================================================
  */
 
+import logoImg from './assets/logo.png'
+
 const siteConfig = {
   /** Display name shown in navbar & page title */
-  siteName: 'Stardew Share',
+  siteName: 'Valleycamp',
 
   /** Short tagline shown on the explore / hero section */
   tagline: 'Discover & share Stardew Valley farm layouts',
 
   /**
-   * Logo image path (relative to /public).
-   * Set to null to use the emoji fallback (🌾).
-   * Example: '/logo.png'
+   * Logo.
+   * - Pakai import (src/assets): set nilai ke variabel import di atas → logoImg
+   * - Pakai public/           : set string path  → '/logo.png'
+   * - Nonaktifkan             : set null          → null (pakai emoji 🌾)
    */
-  logo: '/logo.png',
+  logo: logoImg,
 
   /** Alt text for the logo image (accessibility) */
-  logoAlt: 'Stardew Share logo',
+  logoAlt: 'Valleycamp logo',
 
   /**
    * Page background settings.
